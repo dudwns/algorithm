@@ -1,9 +1,14 @@
-function solution(chicken) {
-  let coupon = chicken;
-  let service = 0;
-  while (coupon >= 10) {
-    service += Math.floor(coupon / 10);
-    coupon = Math.floor(coupon / 10) + (coupon % 10);
+function solution(s) {
+  let open = 0;
+
+  for (const value of s) {
+    if (value === "(") {
+      open++;
+    } else {
+      if (open === 0) return false;
+      open--;
+    }
   }
-  return service;
+
+  return open ? false : true;
 }
