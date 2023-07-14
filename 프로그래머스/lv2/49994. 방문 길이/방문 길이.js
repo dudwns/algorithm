@@ -18,7 +18,7 @@ function solution(dirs) {
         let [ny, nx] = [cy + dy, cx + dx];
         if(ny >= -5 && ny <= 5 && nx >= -5 && nx <= 5){
             move.push(`${ny}${nx}${location[0]}${location[1]}`);
-            move.push(`${location[0]}${location[1]}${ny}${nx}`)
+            move.push(`${location[0]}${location[1]}${ny}${nx}`);
             location[0] = ny;
             location[1] = nx;
         }
