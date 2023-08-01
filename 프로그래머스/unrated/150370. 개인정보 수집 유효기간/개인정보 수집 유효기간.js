@@ -38,6 +38,8 @@ function solution(today, terms, privacies) {
         // 수집 기간과 유효 기간을 더해서 12가 넘으면 연도 증가
         if(month + expDay >= 12){
             year+= Math.floor((month + expDay) / 12);
+            
+            // 만약 12 24 36...이면 0이 아니라 12월이 되어야 함
             if((month + expDay) % 12 === 0) {
                  year--;
                  month = 12;
