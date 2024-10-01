@@ -1,16 +1,9 @@
 function solution(s) {
-    let answer = [];
     let str = s.split(' ');
-    for (word of str) {
-        let keyword = '';
-        for(let i = 0; i < word.length; i++) {
-            if(i == 0) {
-                keyword += word[i].toUpperCase(); 
-            }
-            else {
-                keyword += word[i].toLowerCase(); 
-            }
-        } answer.push(keyword);
+    for(let i = 0; i < str.length; i++) {
+        if(str[i].length) {
+            str[i] = str[i][0].toUpperCase() + str[i].slice(1).toLowerCase(); 
+        } 
     }
-    return answer.join(' ');
+    return str.join(' ');
 }
